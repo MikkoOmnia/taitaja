@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+#title {
+	width: 100%;
+	height: 65%;
+}
+
+#title::before {
+	height: 65%;
+	content: '';
+	position: absolute;
+	background-image: url('images.jpg');
+	background-position: bottom;
+	opacity: 0.5;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+#title h1 {
+	vertical-align: center;
+	filter: contrast(200%);
+	font-size: 6rem;
+}
+
+#imagetext {
+	font-family: arial;
+	display: flex;
+	align-items: center;
+	width: calc(100%-50px);
+	height: 100%;
+	padding-left: 50px;
+	filter: contrast(2);
+}
+
+#container, #shows {
+	position: relative;
+	margin: 50px 200px;
+	padding: 34px 50px;
+}
+
+#container {
+	background-color: #bbffbb;
+}
+
+#shows {
+	background-color: #bbbbff;
+}
+
+#container, #shows p {
+	font-size: 18px;
+	margin-top: 16px;
+	font-family: helvetica;
+}
+
+#footer {
+	display: grid;
+	grid-template-columns: 70% 30%;
+	background-color: #aaaaaa;
+	padding: 20px 200px;
+	height: 200px;
+}
+
+#yhteystiedot {
+	font-family: arial;
+	font-size: 20px;
+}
+
+#yhteystiedot p {
+	margin-top: 8px;
+}
+
+#googlemaps {
+	float: right;
+	height: 100%;
+}
+
+.esitys {
+	margin: 30px 0;
+}
+
+.esitys p {
+	line-height: 6px;
+}
+
+.tilaus p {
+	line-height: 20px;
+}
+
+.tilaus {
+	margin: 30px 0 60px 0;
+}
+
+.tilaus a {
+	border: 3px solid white;
+	border-radius: 15px;
+	padding: 10px;
+	font-family: helvetica;
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.tilaus a:hover {
+	color: black;
+	background-color: white;
+}
+
+.formfield {
+	margin: 8px 0;
+	width: 100%;
+}
+
+.formfield input {
+	font-size: 16px;
+}
+
+.label {
+	display: inline-block;
+	width: 200px;
+}
+
+#submit {
+	margin-top: 20px;
+	font-size: 20px;
+	padding: 8px;
+	width: 100px;
+	border-radius: 15px;
+	background-color: transparent;
+	border: 3px solid black;
+	color: black;
+}
+
+#submit:hover {
+	cursor: pointer;
+	background-color: #11ff11;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  #title, #title::before {
+	  height: 200px;
+  }
+  
+  #title::before {
+	  background-position: center;
+  }
+
+  #title, #imagetext {
+	  transform: none;
+  }
+
+  #imagetext {
+	  justify-content: center;
+	  padding: 0;
+	  width: 100%;
+	  text-align: center;
+  }
+  
+  #container, #shows {
+	  margin: 50px 10px;
+  }
+  
+  #footer {
+	  grid-template-columns: 50% 50%;
+	  font-size: 16px;
+	  padding: 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+	#title, #title::before {
+	  height: 100px;
+	}
+	
+	#imagetext h1 {
+		font-size: 3rem;
+	}
+	
+	 #container, #shows {
+	  margin: 10px 10px;
+	  padding: 10px 20px;
+  }
+  
+  #footer {
+	  display: block;
+	  height: auto;
+  }
+  
+  #googlemaps {
+	  float: none;
+	  width: 100%;
+  }
+  
+  #gmap {
+	  margin-top: 50px;
+	  width: 100%;
+	  display: grid;
+	  place-items: center;
+  }
+}
